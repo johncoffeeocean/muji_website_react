@@ -1,0 +1,10 @@
+<svg id="コンポーネント_2_2" data-name="コンポーネント 2 – 2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="長方形_2" data-name="長方形 2" width="24" height="24" fill="none"/>
+  <g id="グループ_7" data-name="グループ 7" transform="translate(0.969 -11)">
+    <path id="パス_13" data-name="パス 13" d="M3.75,3.75l-.779-3H.75" transform="translate(-0.75 14)" fill="none" stroke="#3c3c43" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <circle id="楕円形_9" data-name="楕円形 9" cx="1.5" cy="1.5" r="1.5" transform="translate(4.01 28.26)" fill="none" stroke="#3c3c43" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="パス_14" data-name="パス 14" d="M22.311,3.25l-1.363,7H4.921l-1.672-7" transform="translate(-0.25 14.5)" fill="none" stroke="#3c3c43" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <circle id="楕円形_10" data-name="楕円形 10" cx="1.5" cy="1.5" r="1.5" transform="translate(17.582 28.251)" fill="none" stroke="#3c3c43" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="パス_15" data-name="パス 15" d="M19.332,13.75l-13.572.01L3.25,3.25" transform="translate(-0.25 14.5)" fill="none" stroke="#3c3c43" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

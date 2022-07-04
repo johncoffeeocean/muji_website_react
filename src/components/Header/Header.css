@@ -1,0 +1,23 @@
+.top-head {
+  border-bottom: 1px solid #dedede;
+}
+
+.top-head span {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  color: #6d6d72;
+}
+
+.top-head__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.6;
+  padding: 0.5em 0.8em;
+}
