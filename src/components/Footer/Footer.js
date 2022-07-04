@@ -135,8 +135,8 @@ export const Footer = () => {
             <img src='https://img.muji.net/img/common/logo-muji.svg' alt='' />
           </a>
           <ul className='socialMedia'>
-            {socialMediaLinkData.map((link) => (
-              <li>
+            {socialMediaLinkData.map((link, index) => (
+              <li key={`social-${index}`}>
                 <a href={link.href}>
                   <img src={link.icon} alt='' />
                 </a>
@@ -144,8 +144,9 @@ export const Footer = () => {
             ))}
           </ul>
         </Col>
-        {siteMapData.map((colData) => (
+        {siteMapData.map((colData, index) => (
           <Col
+            key={`sitemap-${index}`}
             className='siteMapList'
             span={4}
             xl={4}

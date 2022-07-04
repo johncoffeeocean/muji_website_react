@@ -1,0 +1,25 @@
+import React from 'react';
+import { menus } from '../../data';
+
+export const HeaderDropMenu = () => {
+  return (
+    <div className='headerDropMenu'>
+      <ul className='headerDropMenu__list'>
+        {menus.categories.map((category, index) => (
+          <li className='headerDropMenu__list__item' key={`category-${index}`}>
+            <button
+              id={`tabButton${index}`}
+              type='button'
+              tabIndex='0'
+              aria-label={`${category.text}のカテゴリーメニューを開く`}
+              className={`headerDropMenu__btn dropMenuCategory__${index}`}
+              value={index}
+            >
+              {category.text}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};

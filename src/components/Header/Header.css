@@ -1,8 +1,25 @@
-.top-head {
+.header a {
+  color: #3c3c43 !important;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.header li {
+  list-style-type: none;
+  list-style: none;
+}
+
+.header .top-head {
+  height: 49px;
+  width: 100%;
+  line-height: 1.2;
   border-bottom: 1px solid #dedede;
 }
 
-.top-head span {
+.header .top-head span {
   display: inline-flex;
   align-items: center;
   margin-left: 0.5em;
@@ -10,7 +27,7 @@
   color: #6d6d72;
 }
 
-.top-head__link {
+.header .top-head__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,4 +37,146 @@
   font-weight: bold;
   line-height: 1.6;
   padding: 0.5em 0.8em;
+}
+
+.header .header__nav {
+  display: flex;
+  max-width: 1384px;
+  margin: 0 auto;
+  padding: 0 64px;
+  background: #fff;
+}
+
+.headerDropMenu,
+.headerDropMenu__list {
+  display: flex;
+}
+
+.headerDropMenu {
+  position: relative;
+  flex-grow: 1;
+  flex-basis: auto;
+  width: 100%;
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.headerDropMenu__list {
+  flex-grow: 1;
+}
+
+.headerDropMenu__list__item {
+  width: 100%;
+  max-width: 100px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.headerDropMenu__list__item:hover {
+  background-color: #f5f5f5;
+}
+
+.headerDropMenu__btn {
+  font-family: Hiragino Kaku Gothic ProN, ヒラギノ角ゴ Pro W3, Meiryo, メイリオ,
+    游ゴシック Medium, Yu Gothic Medium, 游ゴシック体, Yu Gothic, YuGothic,
+    MS PGothic, Osaka, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3c3c43;
+  line-height: 1.5;
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  text-transform: none;
+  -webkit-appearance: none;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.header__tools {
+  flex: 0 0 auto;
+}
+
+.header__tool {
+  width: 100%;
+  min-width: 63px;
+  transition: background-color 0.3s ease;
+}
+
+.header__toolBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .header .header__container {
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 10px 5px -11px rgba(88 88 88, 0.3);
+    background: #fff;
+  }
+
+  .header .header__logoLink {
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  .header .header__logo,
+  .header .header__logo_simple {
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    width: auto;
+    margin-right: 50px;
+    padding: 0;
+    flex: 0 0 auto;
+  }
+  .header .header__nav {
+    height: 70px;
+  }
+
+  .headerSearch {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header .header__logoLink,
+  .header .header__tools {
+    display: flex;
+  }
+
+  .header .header__tool {
+    position: relative;
+    width: 63px;
+    padding: 0;
+    text-align: center;
+  }
+  .header .header__toolBtn {
+    padding: 0 3px;
+  }
+  .header .header__toolTmb {
+    display: block;
+    margin: 0 auto 5px;
+  }
+  .header .header__toolTmb .header__toolImg {
+    width: 24px;
+    height: 24px;
+  }
+  .header .header__toolTxt {
+    font-size: 11px;
+    color: #3c3c43;
+  }
 }
