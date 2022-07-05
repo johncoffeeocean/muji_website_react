@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Row } from 'antd';
 import styled from 'styled-components';
 
+import { cartData } from '../data';
 import { Heading1, CartItemList, PriceSummary } from '../components';
 
 const ContentContainer = styled.main`
@@ -48,7 +49,7 @@ export const CartPage = () => {
             <span>アイテム数</span>
             <TotalQuantity>2</TotalQuantity>
           </TotalQuantityWrapper>
-          <CartItemList />
+          <CartItemList items={cartData}/>
         </Col>
 
         <Col flex='500px'>

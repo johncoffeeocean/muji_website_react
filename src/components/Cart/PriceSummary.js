@@ -156,7 +156,7 @@ export const PriceSummary = () => {
 
         <SummaryTipsContainer>
           <SummaryTips>
-            <span class='star'>※</span>
+            <span className='star'>※</span>
             <span>
               未ログイン状態では配送料、付帯サービス料が表示されません。
             </span>

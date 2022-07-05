@@ -6,11 +6,11 @@ const CartItemListWrapper = styled.div`
   margin-top: 17px;
 `;
 
-export const CartItemList = ({ data = [1, 2] }) => {
+export const CartItemList = ({ items=[] }) => {
   return (
     <CartItemListWrapper>
-      {data.map((itemData, index) => (
-        <CartItem data={itemData} key={`cart-${index}`} />
+      {items.map((itemData, index) => (
+        <CartItem itemData={itemData} key={`cart-${index}`} />
       ))}
     </CartItemListWrapper>
   );
