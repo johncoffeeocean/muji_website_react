@@ -17,6 +17,7 @@
   width: 100%;
   line-height: 1.2;
   border-bottom: 1px solid #dedede;
+  background-color: white;
 }
 
 .header .top-head span {
@@ -130,7 +131,36 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .header .header__container {
+  .header .header__inner[data-fixmode='top'] {
+    line-height: unset;
+    height: fit-content;
+  }
+  .header .header__inner[data-fixmode='wait'] {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 120;
+    transition: all 0.3s ease 0s;
+  }
+  .header .header__inner[data-fixmode='down'] {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 120;
+    transform: translateY(-100%);
+    transition: transform 0.6s ease 0s;
+  }
+  .header .header__inner[data-fixmode='up'] {
+    position: fixed;
+    top: 0;
+    z-index: 120;
+    width: 100%;
+    line-height: unset;
+    height: fit-content;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header .header__inner {
     border-bottom: 1px solid #e5e5e5;
     box-shadow: 0 10px 5px -11px rgba(88 88 88, 0.3);
     background: #fff;
