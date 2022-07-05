@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Layout, Notice } from '../components';
-import { TopBanner } from '../components/TopBanner';
-import { notice, carouselData } from '../data';
+import { Layout, Notice, TopBanner, Category } from '../components';
+import { notice, topBanner, itemCategory } from '../data';
 
 const TopBannerContainer = styled.div`
   min-height: 100px;
@@ -15,12 +14,14 @@ export const Store = () => {
       <Notice data={notice} />
 
       <TopBannerContainer>
-        {carouselData.map((bannerData) => (
-          <TopBanner data={bannerData} />
+        {topBanner.map((bannerData, index) => (
+          <TopBanner data={bannerData} key={`topbanner-${index}`}/>
         ))}
       </TopBannerContainer>
 
-      <div style={{ height: 1000 }}></div>
+      <Category data={itemCategory} />
+
+      <div style={{ height: 100 }}></div>
     </Layout>
   );
 };

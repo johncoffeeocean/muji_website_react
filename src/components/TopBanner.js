@@ -80,7 +80,7 @@ export const TopBanner = ({ data, settings = {} }) => {
     <CarouselContainer>
       <Carousel autoplay easing='ease'>
         {itemData.map((item, index) => (
-          <ContentContainer key={`topbanner-${index}`}>
+          <ContentContainer key={`banner-${index}`}>
             <ContentImgContainer>
               <a href={item.linkUrl}>
                 <span>
