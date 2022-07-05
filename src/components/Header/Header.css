@@ -39,6 +39,14 @@
   padding: 0.5em 0.8em;
 }
 
+.header .top-head__link small {
+  font-size: 0.75rem;
+}
+
+.header .top-head__link b {
+  font-size: 1rem;
+}
+
 .header .header__nav {
   display: flex;
   max-width: 1384px;

@@ -25,7 +25,7 @@ export const TopHeader = () => {
             </b>
             円以上購入で
           </small>
-          <b style={{ color: '#7f0019', marginLeft: 5, fontSize: 14 }}>
+          <b style={{ color: '#7f0019', marginLeft: 5 }}>
             配送料無料
           </b>
         </span>
