@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Layout, Notice, TopBanner, Category } from '../components';
+import { Notice, TopBanner, Category } from '../components';
 import { notice, topBanner, itemCategory } from '../data';
 
 const TopBannerContainer = styled.div`
@@ -8,9 +8,20 @@ const TopBannerContainer = styled.div`
   margin-top: 30px;
 `;
 
-export const Store = () => {
+const ContentContainer = styled.main`
+  box-sizing: border-box;
+  display: block;
+  max-width: 1384px;
+  width: 100%;
+  margin: 20px auto 50px;
+  padding-left: 64px;
+  padding-right: 64px;
+  padding-top: 20px;
+`;
+
+export const StorePage = () => {
   return (
-    <Layout>
+    <ContentContainer>
       <Notice data={notice} />
 
       <TopBannerContainer>
@@ -20,8 +31,6 @@ export const Store = () => {
       </TopBannerContainer>
 
       <Category data={itemCategory} />
-
-      <div style={{ height: 100 }}></div>
-    </Layout>
+    </ContentContainer>
   );
 };

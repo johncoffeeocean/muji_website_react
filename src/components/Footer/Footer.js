@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Layout, Row, Col, List } from 'antd';
 import './Footer.css';
 
@@ -131,9 +132,9 @@ export const Footer = () => {
     <AntFooter>
       <Row className='footer-main'>
         <Col span={8} xl={8} lg={24} md={24} sm={24} xs={24}>
-          <a className='logo' href='/jp/ja/store'>
+          <Link className='logo' to='/'>
             <img src='https://img.muji.net/img/common/logo-muji.svg' alt='' />
-          </a>
+          </Link>
           <ul className='socialMedia'>
             {socialMediaLinkData.map((link, index) => (
               <li key={`social-${index}`}>

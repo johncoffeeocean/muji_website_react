@@ -5,6 +5,7 @@ import { TopHeader } from './TopHeader';
 import { HeaderDropMenu } from './HeaderDropMenu';
 import { HeaderTools } from './HeaderTools';
 import { HeaderSearch } from './HeaderSearch';
+import { HeaderLogo } from './HeaderLogo';
 
 const PcHeaderContainer = styled.header`
   display: none;
@@ -14,19 +15,6 @@ const PcHeaderContainer = styled.header`
     display: block;
   }
 `;
-
-const HeaderLogo = () => (
-  <div className='header__logo'>
-    <a className='header__logoLink' href='/'>
-      <img
-        src='https://www.muji.com/jp/ja/store/static/media/logo-muji.d7511bb3.svg'
-        alt='無印良品'
-        width='128'
-        height='20'
-      />
-    </a>
-  </div>
-);
 
 export const PcHeader = () => {
   const [fixMode, setFixMode] = useState('top');

@@ -1,11 +1,19 @@
 import 'antd/dist/antd.min.css';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import { Layout } from './components';
 
-import { Store } from './pages/Store';
+import { StorePage } from './pages';
+import { CartPage } from './pages/CartPage';
 
 function App() {
   return (
-    <Store />
+    <Layout>
+      <Routes>
+        <Route path='/cart' element={<CartPage />} />
+        <Route path='/' element={<StorePage />} />
+      </Routes>
+    </Layout>
   );
 }
 

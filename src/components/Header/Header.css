@@ -201,7 +201,13 @@
     width: 63px;
     padding: 0;
     text-align: center;
+    transition: background-color 0.3s ease;
   }
+  .header .header__tool:hover {
+    background-color: #e8e8e8;
+    text-decoration: none;
+  }
+
   .header .header__toolBtn {
     padding: 0 3px;
   }
