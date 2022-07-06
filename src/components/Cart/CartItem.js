@@ -111,7 +111,7 @@ export const CartItem = ({ itemData }) => {
       </Link>
       <ItemInfoWrapper>
         <div>
-          <ItemName to='/detail/4550344949986'>
+          <ItemName to={`/detail/${itemData.item.janCode}`}>
             {itemData.item.summary.skuName}
           </ItemName>
           <ItemInfo>

@@ -4,8 +4,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import { Layout } from './components';
 
-import { StorePage } from './pages';
-import { CartPage } from './pages/CartPage';
+import { ProductDetailPage, StorePage, CartPage } from './pages';
 
 function App() {
   const { pathname } = useLocation();
@@ -17,6 +16,7 @@ function App() {
   return (
     <Layout>
       <Routes>
+        <Route path='/detail/:id' element={<ProductDetailPage />} />
         <Route path='/cart' element={<CartPage />} />
         <Route path='/' element={<StorePage />} />
       </Routes>

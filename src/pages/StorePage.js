@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Notice, TopBanner, Category } from '../components';
 import { notice, topBanner, itemCategory } from '../data';
@@ -20,13 +20,17 @@ const ContentContainer = styled.main`
 `;
 
 export const StorePage = () => {
+  useEffect(() => {
+    document.title = '無印良品';
+  }, []);
+
   return (
     <ContentContainer>
       <Notice data={notice} />
 
       <TopBannerContainer>
         {topBanner.map((bannerData, index) => (
-          <TopBanner data={bannerData} key={`topbanner-${index}`}/>
+          <TopBanner data={bannerData} key={`topbanner-${index}`} />
         ))}
       </TopBannerContainer>
 

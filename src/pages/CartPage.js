@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Col, Row } from 'antd';
 import styled from 'styled-components';
 
@@ -38,24 +38,38 @@ const TotalQuantity = styled.span`
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
 `;
 
+const NoItemFound = styled.div`
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const CartPage = () => {
+  useEffect(() => {
+    document.title = 'ショッピングカート｜無印良品';
+  }, []);
+
   return (
     <ContentContainer>
       <Heading1 style={{ marginTop: 45 }}>ショッピングカート</Heading1>
+      {cartData.length ? (
+        <CartContainer gutter={50}>
+          <Col flex='auto'>
+            <TotalQuantityWrapper>
+              <span>アイテム数</span>
+              <TotalQuantity>2</TotalQuantity>
+            </TotalQuantityWrapper>
+            <CartItemList items={cartData} />
+          </Col>
 
-      <CartContainer gutter={50}>
-        <Col flex='auto'>
-          <TotalQuantityWrapper>
-            <span>アイテム数</span>
-            <TotalQuantity>2</TotalQuantity>
-          </TotalQuantityWrapper>
-          <CartItemList items={cartData}/>
-        </Col>
-
-        <Col flex='500px'>
-          <PriceSummary />
-        </Col>
-      </CartContainer>
+          <Col flex='500px'>
+            <PriceSummary />
+          </Col>
+        </CartContainer>
+      ) : (
+        <NoItemFound>ショッピングカートの中に商品がございません。</NoItemFound>
+      )}
     </ContentContainer>
   );
 };
