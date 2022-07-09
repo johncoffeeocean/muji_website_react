@@ -1,24 +1,11 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import { Breadcrumb } from '../components/Breadcrumb';
-import Detail from '../components/Product/Detail';
 
-const breadcrumbs = [
-  {
-    path: 'ROOT',
-    name: 'ネットストア',
-  },
-  {
-    path: 'D00023',
-    name: 'MUJI Labo',
-  },
-  {
-    path: 'S1001302',
-    name: 'MUJI Labo | Tシャツ・スウェット',
-  },
-];
+import {ProductDetail,Breadcrumb} from '../components';
+import { product } from '../data/product';
 
-const ContentContainer = styled.main`
+const ContentContainer = styled.div`
   @media (min-width: 768px) {
     padding: 20px 2vw 0px;
   }
@@ -46,12 +33,19 @@ const ContentWrapper = styled.div`
   }
 `;
 
+const ProductDetailWrapper = styled.div`
+  margin-top: 15px;
+`;
+
 export const ProductDetailPage = () => {
   return (
     <ContentContainer>
       <ContentWrapper>
-        <Breadcrumb links={breadcrumbs} />
-        <Detail />
+        <Breadcrumb links={product.links[0].normal} />
+
+        <ProductDetailWrapper>
+          <ProductDetail />
+        </ProductDetailWrapper>
       </ContentWrapper>
     </ContentContainer>
   );

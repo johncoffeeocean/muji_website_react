@@ -8,7 +8,7 @@ const TopBannerContainer = styled.div`
   margin-top: 30px;
 `;
 
-const ContentContainer = styled.main`
+const ContentContainer = styled.div`
   box-sizing: border-box;
   display: block;
   max-width: 1384px;

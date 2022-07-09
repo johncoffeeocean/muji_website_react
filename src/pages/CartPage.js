@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { cartData } from '../data';
 import { Heading1, CartItemList, PriceSummary } from '../components';
 
-const ContentContainer = styled.main`
+const ContentContainer = styled.div`
   box-sizing: border-box;
   display: block;
   max-width: 1384px;
