@@ -1,7 +1,7 @@
 import React from 'react';
 import { menus } from '../../data';
 
-export const HeaderDropMenu = () => {
+export const HeaderDropMenu = ({ onChangeCategory, currentCategory }) => {
   return (
     <div className='headerDropMenu'>
       <ul className='headerDropMenu__list'>
@@ -12,8 +12,11 @@ export const HeaderDropMenu = () => {
               type='button'
               tabIndex='0'
               aria-label={`${category.text}のカテゴリーメニューを開く`}
-              className={`headerDropMenu__btn dropMenuCategory__${index}`}
-              value={index}
+              className={`headerDropMenu__btn dropMenuCategory__${index} ${
+                currentCategory === category.text &&
+                'headerDropMenu__btn--current'
+              }`}
+              onClick={() => onChangeCategory(category.text)}
             >
               {category.text}
             </button>

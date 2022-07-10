@@ -7,9 +7,9 @@ import './Header.css';
 
 export const Header = () => {
   return (
-    <header className='header'>
+    <div className='headers'>
       <PcHeader />
       <MobileHeader />
-    </header>
+    </div>
   );
 };
