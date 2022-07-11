@@ -105,21 +105,31 @@ const ModalCloseBtn = styled.button`
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
 
-const LinkItem = ({ link }) => {
+const LinkItem = ({ link, onCloseCategoryModal }) => {
   return (
     <li className='dropMenuCategory__menu__linkList__item'>
-      <Link
-        // to={link.section ? `/section/${link.sectionCode}` : link.to}
-        to={`/section/${link.sectionCode}`}
-        className='dropMenuCategory__menu__linkList__link'
-      >
-        {link.text}
-      </Link>
+      {link.to ? (
+        <a
+          href={link.to}
+          className='dropMenuCategory__menu__linkList__link'
+          onClick={onCloseCategoryModal}
+        >
+          {link.text}
+        </a>
+      ) : (
+        <Link
+          to={link.sectionCode ? `/section/${link.sectionCode}` : link.to}
+          className='dropMenuCategory__menu__linkList__link'
+          onClick={onCloseCategoryModal}
+        >
+          {link.text}
+        </Link>
+      )}
     </li>
   );
 };
 
-const Column = ({ columnData }) => {
+const Column = ({ columnData, onCloseCategoryModal }) => {
   return (
     <li className='dropMenuCategory__columnList__item'>
       {columnData.map((menu, menuIndex) => (
@@ -127,7 +137,11 @@ const Column = ({ columnData }) => {
           <div className='dropMenuCategory__menu__title'>{menu.text}</div>
           <ul className='dropMenuCategory__menu__linkList'>
             {menu.children.map((link, linkIndex) => (
-              <LinkItem key={`link-${linkIndex}`} link={link} />
+              <LinkItem
+                key={`link-${linkIndex}`}
+                link={link}
+                onCloseCategoryModal={onCloseCategoryModal}
+              />
             ))}
           </ul>
         </div>
@@ -136,7 +150,12 @@ const Column = ({ columnData }) => {
   );
 };
 
-const Category = ({ currentCategory, categoryData, index }) => {
+const Category = ({
+  currentCategory,
+  categoryData,
+  index,
+  onCloseCategoryModal,
+}) => {
   return (
     <div
       id={`dropMenuCategory__${index}`}
@@ -147,7 +166,11 @@ const Category = ({ currentCategory, categoryData, index }) => {
     >
       <ul className='dropMenuCategory__columnList'>
         {categoryData.parent.map((columnData, colIndex) => (
-          <Column key={`column-${colIndex}`} columnData={columnData} />
+          <Column
+            key={`column-${colIndex}`}
+            columnData={columnData}
+            onCloseCategoryModal={onCloseCategoryModal}
+          />
         ))}
       </ul>
     </div>
@@ -194,6 +217,7 @@ export const CategoryModal = ({
               categoryData={categoryData}
               index={catIndex}
               currentCategory={currentCategory}
+              onCloseCategoryModal={onCloseCategoryModal}
             />
           ))}
           <AnotherMenu topMenu={menus.topMenu} bottomMenu={menus.bottomMenu} />
