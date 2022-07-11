@@ -115,7 +115,7 @@ export const PictureColumn = ({ pictureData, itemName }) => {
   );
 
   return (
-    <Col lg={14} xs={24}>
+    <Col lg={14} xs={24} className='pictureCol'>
       <SlickSlider easing='ease' swipeToSlide draggable infinite autoplay>
         {swipeImageList.map((item, index) => (
           <div key={`banner-${index}`}>

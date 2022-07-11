@@ -1,8 +1,7 @@
-import React from 'react';
-// import { useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
-import {ProductDetail,Breadcrumb} from '../components';
+import { ProductDetail, Breadcrumb } from '../components';
 import { product } from '../data/product';
 
 const ContentContainer = styled.div`
@@ -38,6 +37,10 @@ const ProductDetailWrapper = styled.div`
 `;
 
 export const ProductDetailPage = () => {
+  useEffect(() => {
+    document.title = `${product.itemName} ${product.itemStandardName} | ${product.sectionTag} | 無印良品`;
+  }, []);
+
   return (
     <ContentContainer>
       <ContentWrapper>

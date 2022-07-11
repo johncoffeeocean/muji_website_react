@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Col } from 'antd';
 import { VscHeart as HeartIcon } from 'react-icons/vsc';
@@ -24,7 +24,7 @@ const ColWrapper = styled(Col)`
 const StickyWrapper = styled.div`
   @media (min-width: 768px) {
     position: sticky;
-    top: -660px;
+    top: ${(props) => props.topSticky}px;
   }
   @media (max-width: 768px) {
     padding-left: 5.333vw;
@@ -174,12 +174,29 @@ const ItemActionWrapper = styled.div`
 `;
 
 export const InfoColumn = ({ productData }) => {
+  const [stickyOffset, setStickyOffset] = useState();
+  const columnRef = createRef();
   const oldPricesLen = productData.price.oldPrices?.length ?? undefined;
   const btnIconSize = 25;
 
+  useEffect(() => {
+    const { current } = columnRef;
+
+    if (current) {
+      const topOffset = current.getBoundingClientRect().top;
+      const bottomOffset = current.getBoundingClientRect().bottom;
+
+      setStickyOffset(topOffset + window.innerHeight - bottomOffset);
+    }
+  }, [columnRef]);
+
   return (
-    <ColWrapper lg={8} xs={24} offset={2}>
-      <StickyWrapper style={{ width: '100%' }}>
+    <ColWrapper className='infoCol' lg={8} xs={24} offset={2}>
+      <StickyWrapper
+        style={{ width: '100%' }}
+        topSticky={stickyOffset}
+        ref={columnRef}
+      >
         <div id='area-title' style={{ display: 'flex' }}>
           <Title>
             <h1>{productData.itemName}</h1>
@@ -193,7 +210,7 @@ export const InfoColumn = ({ productData }) => {
         <div id='area-subtitle'>
           <SubTitle>男女兼用Ｌ～ＸＬ・ベージュ</SubTitle>
         </div>
-        <div>
+        <div id='area-price'>
           {oldPricesLen && (
             <SaleTag>
               <span>SALE</span>
