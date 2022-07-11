@@ -4,8 +4,7 @@
 
 Muji (無印良品, Mujirushi Ryōhin) is a Japanese retail company which sells a wide variety of household and consumer goods.
 
-Muji's design philosophy is minimalist, and it places an emphasis on recycling, reducing production and packaging waste,  
-and a **no-logo** or **"no-brand" policy**.
+Muji's design philosophy is minimalist, and it places an emphasis on recycling, reducing production and packaging waste, and a **no-logo** or **"no-brand" policy**.
 
 Because of its design gives me a basic but also luxury experience, I decided to open this ecommerce clone project :heart:  
 
