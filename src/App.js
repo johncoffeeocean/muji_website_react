@@ -4,7 +4,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import { Layout } from './components';
 
-import { ProductDetailPage, StorePage, CartPage } from './pages';
+import { ProductDetailPage, StorePage, CartPage, SectionPage, NotFoundPage } from './pages';
 
 function App() {
   const { pathname } = useLocation();
@@ -16,9 +16,11 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path='/detail/:id' element={<ProductDetailPage />} />
-        <Route path='/cart' element={<CartPage />} />
+        <Route path='*' element={<NotFoundPage />}/>
+
         <Route path='/' element={<StorePage />} />
+        <Route path='/cart' element={<CartPage />} />
+        <Route path='/detail/:id' element={<ProductDetailPage />} />
       </Routes>
     </Layout>
   );
