@@ -89,9 +89,8 @@
 }
 
 .headerDropMenu__btn {
-  font-family: Hiragino Kaku Gothic ProN, ヒラギノ角ゴ Pro W3, Meiryo, メイリオ,
-    游ゴシック Medium, Yu Gothic Medium, 游ゴシック体, Yu Gothic, YuGothic,
-    MS PGothic, Osaka, arial, sans-serif;
+  font-family: Hiragino Kaku Gothic ProN, ヒラギノ角ゴ Pro W3, Meiryo, メイリオ, 游ゴシック Medium, Yu Gothic Medium,
+    游ゴシック体, Yu Gothic, YuGothic, MS PGothic, Osaka, arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: #3c3c43;
@@ -112,7 +111,7 @@
 }
 
 .headerDropMenu__btn--current:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -141,18 +140,18 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .header .header__inner[data-fixmode='top'] {
+  .header .header__inner[data-fixmode="top"] {
     line-height: unset;
     height: fit-content;
   }
-  .header .header__inner[data-fixmode='wait'] {
+  .header .header__inner[data-fixmode="wait"] {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 120;
     transition: all 0.3s ease 0s;
   }
-  .header .header__inner[data-fixmode='down'] {
+  .header .header__inner[data-fixmode="down"] {
     position: fixed;
     top: 0;
     width: 100%;
@@ -160,7 +159,7 @@
     transform: translateY(-100%);
     transition: transform 0.6s ease 0s;
   }
-  .header .header__inner[data-fixmode='up'] {
+  .header .header__inner[data-fixmode="up"] {
     position: fixed;
     top: 0;
     z-index: 120;

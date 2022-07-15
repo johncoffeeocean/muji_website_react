@@ -1,6 +1,6 @@
-export { StorePage } from './StorePage';
-export { CartPage } from './CartPage';
-export { SectionPage } from './SectionPage';
-export { ProductDetailPage } from './ProductDetailPage';
+export { StorePage } from "./StorePage";
+export { CartPage } from "./CartPage";
+export { SectionPage } from "./SectionPage";
+export { ProductDetailPage } from "./ProductDetailPage";
 
-export { NotFoundPage } from './NotFoundPage';
+export { NotFoundPage } from "./NotFoundPage";

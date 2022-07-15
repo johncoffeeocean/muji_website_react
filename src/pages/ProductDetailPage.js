@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
+import React, { useEffect } from "react";
+import styled from "styled-components";
 
-import { ProductDetail, Breadcrumb } from '../components';
-import { product } from '../data/product';
+import { Breadcrumb, ProductDetail } from "../components";
+import { product } from "../data/product";
 
 const ContentContainer = styled.div`
   @media (min-width: 768px) {

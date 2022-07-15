@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
-import { InputNumber } from 'antd';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { InputNumber } from "antd";
 
 const QuantityWrapper = styled.div`
   margin-top: 30px;
@@ -113,7 +113,7 @@ export const Quantity = ({ min = 1, max = 20 }) => {
         </h3>
         <QuantityActionWrapper>
           <QuantityActionBtn
-            className={`quantity-decrease ${quantity <= min && 'disabled'}`}
+            className={`quantity-decrease ${quantity <= min && "disabled"}`}
             onClick={decreaseQuantityHandler}
           >
             <AiOutlineMinus />
@@ -128,7 +128,7 @@ export const Quantity = ({ min = 1, max = 20 }) => {
             />
           </QuantityInput>
           <QuantityActionBtn
-            className={`quantity-increase ${quantity >= max && 'disabled'}`}
+            className={`quantity-increase ${quantity >= max && "disabled"}`}
             onClick={increaseQuantityHandler}
           >
             <AiOutlinePlus />

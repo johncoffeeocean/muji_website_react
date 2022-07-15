@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Row } from 'antd';
-import { InfoColumn } from './InfoColumn';
-import { PictureColumn } from './PictureColumn';
-import { product } from '../../data';
+import React from "react";
+import styled from "styled-components";
+import { Row } from "antd";
+import { InfoColumn } from "./InfoColumn";
+import { PictureColumn } from "./PictureColumn";
+import { product } from "../../data";
 
 const RowWrapper = styled(Row)`
   @media (min-width: 992px) {

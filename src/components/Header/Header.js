@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { PcHeader } from './PcHeader';
-import { MobileHeader } from './MobileHeader';
+import { PcHeader } from "./PcHeader";
+import { MobileHeader } from "./MobileHeader";
 
-import './Header.css';
+import "./Header.css";
 
 export const Header = () => {
   return (

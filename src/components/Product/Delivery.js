@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const DeliveryFreeBannerWrapper = styled.div`
   background-color: rgb(255, 255, 255);
@@ -290,7 +290,7 @@ export const Delivery = ({ productData, freeDelivery }) => {
         <DeliveryFeeNotice>
           <span>※店舗でのご注文と配送料が異なる場合がございます。</span>
         </DeliveryFeeNotice>
-        <div style={{ textAlign: 'right', marginRight: 25 }}>
+        <div style={{ textAlign: "right", marginRight: 25 }}>
           <DetailNew>
             <a
               href='https://www.muji.net/mt/contact/detail_list/014397.html'

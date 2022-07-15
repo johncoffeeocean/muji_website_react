@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
-import 'antd/dist/antd.min.css';
-import { Route, Routes, useLocation } from 'react-router-dom';
-import './App.css';
-import { Layout } from './components';
+import { useEffect } from "react";
+import "antd/dist/antd.min.css";
+import { Route, Routes, useLocation } from "react-router-dom";
+import "./App.css";
+import { Layout } from "./components";
 
-import { ProductDetailPage, StorePage, CartPage, SectionPage, NotFoundPage } from './pages';
+import { CartPage, NotFoundPage, ProductDetailPage, SectionPage, StorePage } from "./pages";
 
 function App() {
   const { pathname } = useLocation();

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Header } from './Header/Header';
-import { Footer } from './Footer/Footer';
-import styled from 'styled-components';
+import React from "react";
+import { Header } from "./Header/Header";
+import { Footer } from "./Footer/Footer";
+import styled from "styled-components";
 
 const ContentContainer = styled.main`
   width: 100%;

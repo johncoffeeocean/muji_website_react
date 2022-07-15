@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { CartItem } from './CartItem';
+import React from "react";
+import styled from "styled-components";
+import { CartItem } from "./CartItem";
 
 const CartItemListWrapper = styled.div`
   margin-top: 17px;

@@ -1,14 +1,14 @@
-import React, { createRef, useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { Col } from 'antd';
-import { VscHeart as HeartIcon } from 'react-icons/vsc';
+import React, { createRef, useEffect, useState } from "react";
+import styled from "styled-components";
+import { Col } from "antd";
+import { VscHeart as HeartIcon } from "react-icons/vsc";
 
-import { Price } from './Price';
-import { Info } from './Info';
-import { Delivery } from './Delivery';
-import { Variation } from './Variation';
-import { Size } from './Size';
-import { Quantity } from './Quantity';
+import { Price } from "./Price";
+import { Info } from "./Info";
+import { Delivery } from "./Delivery";
+import { Variation } from "./Variation";
+import { Size } from "./Size";
+import { Quantity } from "./Quantity";
 
 const ColWrapper = styled(Col)`
   @media (min-width: 768px) {
@@ -193,17 +193,17 @@ export const InfoColumn = ({ productData }) => {
   return (
     <ColWrapper className='infoCol' lg={8} xs={24} offset={2}>
       <StickyWrapper
-        style={{ width: '100%' }}
+        style={{ width: "100%" }}
         topSticky={stickyOffset}
         ref={columnRef}
       >
-        <div id='area-title' style={{ display: 'flex' }}>
+        <div id='area-title' style={{ display: "flex" }}>
           <Title>
             <h1>{productData.itemName}</h1>
           </Title>
           <AddWishListBtn>
             <button>
-              <HeartIcon style={{ fontSize: '24px', color: '#9d9da0' }} />
+              <HeartIcon style={{ fontSize: "24px", color: "#9d9da0" }} />
             </button>
           </AddWishListBtn>
         </div>
@@ -221,10 +221,10 @@ export const InfoColumn = ({ productData }) => {
             className='pictureCol'
             style={{
               maxWidth: 670,
-              display: 'none',
-              marginLeft: '-5.333vw',
-              marginRight: '-5.333vw',
-              position: 'relative',
+              display: "none",
+              marginLeft: "-5.333vw",
+              marginRight: "-5.333vw",
+              position: "relative",
             }}
           ></div>
 

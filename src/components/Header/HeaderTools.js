@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const CartTmb = styled.span`
   &::before {
@@ -26,7 +26,7 @@ const LoginBtn = () => {
     <div
       id='LoginIcon'
       className='header__tool header__tool--login'
-      style={{ cursor: 'pointer', height: '100%' }}
+      style={{ cursor: "pointer", height: "100%" }}
     >
       <div
         className='header__toolBtn'
@@ -85,7 +85,7 @@ const SupportBtn = () => {
     <div
       id='SupportIcon'
       className='header__tool header__tool--support'
-      style={{ cursor: 'pointer', height: '100%' }}
+      style={{ cursor: "pointer", height: "100%" }}
     >
       <div
         className='header__toolBtn'

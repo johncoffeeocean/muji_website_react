@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const SectionContainer = styled.li`
   border: 1px solid #dbdbdb;

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Form, Input } from 'antd';
-import styled from 'styled-components';
-import { AiFillCaretDown, AiFillCloseCircle } from 'react-icons/ai';
+import React from "react";
+import { Form, Input } from "antd";
+import styled from "styled-components";
+import { AiFillCaretDown, AiFillCloseCircle } from "react-icons/ai";
 
 const FormContainer = styled(Form)`
   background-color: white;
@@ -114,7 +114,7 @@ export const HeaderSearch = () => {
     <div className='headerSearch'>
       <FormContainer
         id='searchLayoutForm'
-        style={{ zIndex: 99, position: 'relative' }}
+        style={{ zIndex: 99, position: "relative" }}
       >
         <SearchBar
           id='searchInputLayout'

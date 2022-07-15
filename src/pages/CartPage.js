@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import { Col, Row } from 'antd';
-import styled from 'styled-components';
+import React, { useEffect } from "react";
+import { Col, Row } from "antd";
+import styled from "styled-components";
 
-import { cartData } from '../data';
-import { Heading1, CartItemList, PriceSummary } from '../components';
+import { cartData } from "../data";
+import { CartItemList, Heading1, PriceSummary } from "../components";
 
 const ContentContainer = styled.div`
   box-sizing: border-box;
@@ -47,7 +47,7 @@ const NoItemFound = styled.div`
 
 export const CartPage = () => {
   useEffect(() => {
-    document.title = 'ショッピングカート｜無印良品';
+    document.title = "ショッピングカート｜無印良品";
   }, []);
 
   return (

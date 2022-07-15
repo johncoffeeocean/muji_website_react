@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useParams } from 'react-router-dom';
-import { Breadcrumb } from '../components';
-import { tshirtSection as data } from '../data';
+import React from "react";
+import styled from "styled-components";
+import { useParams } from "react-router-dom";
+import { Breadcrumb } from "../components";
+import { tshirtSection as data } from "../data";
 
 const ContentContainer = styled.div`
   box-sizing: border-box;

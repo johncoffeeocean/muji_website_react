@@ -1,6 +1,6 @@
-import { Table } from 'antd';
-import React from 'react';
-import styled from 'styled-components';
+import { Table } from "antd";
+import React from "react";
+import styled from "styled-components";
 
 const SpecsWrapper = styled.div`
   width: 100%;
@@ -48,14 +48,14 @@ const SpecsTable = styled(Table)`
 export const Specification = ({ specs }) => {
   const columns = [
     {
-      title: 'Name',
-      dataIndex: 'name',
-      key: 'name',
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
     },
     {
-      title: 'Specification',
-      dataIndex: 'value',
-      key: 'specs',
+      title: "Specification",
+      dataIndex: "value",
+      key: "specs",
     },
   ];
 

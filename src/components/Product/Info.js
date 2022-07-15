@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { Tabs } from 'antd';
-import { Specification } from './Specification';
-import { SizeChart } from './SizeChart';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { Tabs } from "antd";
+import { Specification } from "./Specification";
+import { SizeChart } from "./SizeChart";
 
 const InfoWrapper = styled.div`
   margin-top: 30px;
@@ -203,7 +203,7 @@ export const Info = ({ productData }) => {
               </Description>
               {isSeeMore ? (
                 <>
-                  <ExtraInfoWrapper className={isSeeMore && 'display'}>
+                  <ExtraInfoWrapper className={isSeeMore && "display"}>
                     <dl className='productData__list'>
                       <div className='productData__item productData__receivingMeans'>
                         <dt className='productData__dttl'>

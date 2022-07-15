@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { Heading3 } from '../Heading';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { Heading3 } from "../Heading";
 
 const VariatonListWrapper = styled.div`
   margin-top: 20px;
@@ -64,11 +64,11 @@ const VariationListItemStockStatus = styled.span`
 `;
 
 export const Variation = () => {
-  const [selectedVariation, setSelectedVarition] = useState('color-015-1');
+  const [selectedVariation, setSelectedVarition] = useState("color-015-1");
 
   const selectVariationHandler = (event) => {
-    setSelectedVarition(event.target.value)
-  }
+    setSelectedVarition(event.target.value);
+  };
 
   return (
     <div id='area-color'>
@@ -84,7 +84,7 @@ export const Variation = () => {
               id='color-009-0'
               name='color'
               value='009'
-              defaultChecked={selectedVariation === 'color-009-0'}
+              defaultChecked={selectedVariation === "color-009-0"}
               onChange={selectVariationHandler}
             />
             <label htmlFor='color-009-0'>
@@ -104,7 +104,7 @@ export const Variation = () => {
               id='color-015-1'
               name='color'
               value='015'
-              defaultChecked={selectedVariation === 'color-015-1'}
+              defaultChecked={selectedVariation === "color-015-1"}
               onChange={selectVariationHandler}
             />
             <label htmlFor='color-015-1'>

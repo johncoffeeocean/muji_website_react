@@ -1,6 +1,6 @@
-import React from 'react';
-import { Col, Carousel, Row } from 'antd';
-import styled from 'styled-components';
+import React from "react";
+import { Carousel, Col, Row } from "antd";
+import styled from "styled-components";
 
 const SlickSlider = styled(Carousel)`
   .slick-dots {
@@ -108,10 +108,10 @@ const ThumbnailImg = styled.img`
 
 export const PictureColumn = ({ pictureData, itemName }) => {
   const swipeImageList = pictureData.map(
-    (imgData) => imgData.attributes.damImageResizes[1260]
+    (imgData) => imgData.attributes.damImageResizes[1260],
   );
   const thumbPictureList = pictureData.map(
-    (imgData) => imgData.attributes.damImageResizes[400]
+    (imgData) => imgData.attributes.damImageResizes[400],
   );
 
   return (

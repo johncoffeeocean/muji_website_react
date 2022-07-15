@@ -1,6 +1,6 @@
-import { Carousel } from 'antd';
-import React from 'react';
-import styled from 'styled-components';
+import { Carousel } from "antd";
+import React from "react";
+import styled from "styled-components";
 
 const CarouselContainer = styled.div`
   height: fit-content;

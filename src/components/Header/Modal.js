@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const ModalStyle = styled.div`
   position: fixed;
@@ -63,11 +63,11 @@ const ModalStyle = styled.div`
 export const Modal = ({ isOpened, children }) => {
   return (
     <ModalStyle
-      className={`modal ${isOpened ? 'modal-is-opened' : 'modal-is-closed'}`}
+      className={`modal ${isOpened ? "modal-is-opened" : "modal-is-closed"}`}
     >
       <div
         className={`modal-overlay ${
-          isOpened ? 'modal-is-opened' : 'modal-is-closed'
+          isOpened ? "modal-is-opened" : "modal-is-closed"
         }`}
       />
 

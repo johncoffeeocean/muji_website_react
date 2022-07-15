@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Table } from 'antd';
+import React from "react";
+import styled from "styled-components";
+import { Table } from "antd";
 
 const SizeChartWrapper = styled.div`
   width: 100%;
@@ -57,7 +57,7 @@ const SizeTable = styled(Table)`
 
 export const SizeChart = ({ chartData }) => {
   const columns = [
-    { key: 'サイズ', dataIndex: 'サイズ', title: <div>サイズ</div> },
+    { key: "サイズ", dataIndex: "サイズ", title: <div>サイズ</div> },
     ...chartData[0].itemSpecs.map((data) => ({
       key: data.name,
       dataIndex: data.name,

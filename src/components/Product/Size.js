@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { Heading3 } from '../Heading';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { Heading3 } from "../Heading";
 
 const SizeWrapper = styled.div`
   margin-top: 30px;
@@ -60,7 +60,7 @@ const SizeOption = styled.li`
 `;
 
 export const Size = () => {
-  const [selectedSize, setSelectedSize] = useState('size-143-0');
+  const [selectedSize, setSelectedSize] = useState("size-143-0");
 
   return (
     <div id='area-size'>
@@ -84,8 +84,8 @@ export const Size = () => {
               type='radio'
               name='size'
               value='143'
-              defaultChecked={selectedSize === 'size-143-0'}
-              onClick={() => setSelectedSize('size-143-0')}
+              defaultChecked={selectedSize === "size-143-0"}
+              onClick={() => setSelectedSize("size-143-0")}
             />
             <label htmlFor='size-143-0'>Ｓ～Ｍ</label>
           </SizeOption>
@@ -95,8 +95,8 @@ export const Size = () => {
               type='radio'
               name='size'
               value='293'
-              defaultChecked={selectedSize === 'size-293-1'}
-              onClick={() => setSelectedSize('size-293-1')}
+              defaultChecked={selectedSize === "size-293-1"}
+              onClick={() => setSelectedSize("size-293-1")}
             />
             <label htmlFor='size-293-1'>Ｌ～ＸＬ</label>
           </SizeOption>
@@ -106,8 +106,8 @@ export const Size = () => {
               type='radio'
               name='size'
               value='367'
-              defaultChecked={selectedSize === 'size-367-2'}
-              onClick={() => setSelectedSize('size-367-2')}
+              defaultChecked={selectedSize === "size-367-2"}
+              onClick={() => setSelectedSize("size-367-2")}
             />
             <label htmlFor='size-367-2'>ＸＸＳ～ＸＳ</label>
           </SizeOption>

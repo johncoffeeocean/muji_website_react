@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
-import { InputNumber } from 'antd';
+import React from "react";
+import styled from "styled-components";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { InputNumber } from "antd";
 
 const SpaceBetweenWrapper = styled.div`
   display: flex;
@@ -166,7 +166,7 @@ export const CartItemSubTotal = ({
         </QuantityActionBtn>
       </QuantityActionWrapper>
       <div className='sc-pZdvY cBuwhn'>
-        <SubTotal style={{ color: 'rgb(60, 60, 67)' }}>
+        <SubTotal style={{ color: "rgb(60, 60, 67)" }}>
           <span>小計（消費税込）</span>
           <span className='sub-total__price'>2,980</span>
           <span className='sub-total__price__yen'>

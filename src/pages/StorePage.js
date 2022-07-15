@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
-import { Notice, TopBanner, Category } from '../components';
-import { notice, topBanner, itemCategory } from '../data';
+import React, { useEffect } from "react";
+import styled from "styled-components";
+import { Category, Notice, TopBanner } from "../components";
+import { itemCategory, notice, topBanner } from "../data";
 
 const TopBannerContainer = styled.div`
   min-height: 100px;
@@ -21,7 +21,7 @@ const ContentContainer = styled.div`
 
 export const StorePage = () => {
   useEffect(() => {
-    document.title = '無印良品';
+    document.title = "無印良品";
   }, []);
 
   return (

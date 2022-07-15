@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Row, Col } from 'antd';
+import React from "react";
+import styled from "styled-components";
+import { Col, Row } from "antd";
 
-import { Heading2, Heading3 } from '../Heading';
-import { SubCategorySection } from './SubCategorySection';
+import { Heading2, Heading3 } from "../Heading";
+import { SubCategorySection } from "./SubCategorySection";
 
 const SubCategoryListWrap = styled.div`
   margin-top: 30px;

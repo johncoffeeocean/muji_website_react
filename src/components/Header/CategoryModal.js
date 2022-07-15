@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { menus } from '../../data/menus';
-import { VscClose } from 'react-icons/vsc';
-import styled from 'styled-components';
-import { Modal } from './Modal';
+import React from "react";
+import { Link } from "react-router-dom";
+import { menus } from "../../data/menus";
+import { VscClose } from "react-icons/vsc";
+import styled from "styled-components";
+import { Modal } from "./Modal";
 
 const DropMenu = styled.div`
   position: relative;
@@ -161,7 +161,7 @@ const Category = ({
       id={`dropMenuCategory__${index}`}
       className='dropMenuCategory__body'
       style={{
-        display: currentCategory === categoryData.text ? 'block' : 'none',
+        display: currentCategory === categoryData.text ? "block" : "none",
       }}
     >
       <ul className='dropMenuCategory__columnList'>

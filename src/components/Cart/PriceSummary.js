@@ -1,9 +1,9 @@
-import { Button } from 'antd';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Button } from "antd";
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-import { Heading2 } from '../Heading';
+import { Heading2 } from "../Heading";
 
 const SummaryContainer = styled.div`
   margin-top: 40px;

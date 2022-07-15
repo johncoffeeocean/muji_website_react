@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 
-import { TopHeader } from './TopHeader';
-import { HeaderDropMenu } from './HeaderDropMenu';
-import { HeaderTools } from './HeaderTools';
-import { HeaderSearch } from './HeaderSearch';
-import { HeaderLogo } from './HeaderLogo';
-import { CategoryModal } from './CategoryModal';
+import { TopHeader } from "./TopHeader";
+import { HeaderDropMenu } from "./HeaderDropMenu";
+import { HeaderTools } from "./HeaderTools";
+import { HeaderSearch } from "./HeaderSearch";
+import { HeaderLogo } from "./HeaderLogo";
+import { CategoryModal } from "./CategoryModal";
 
 const PcHeaderContainer = styled.div`
   display: none;
@@ -26,7 +26,7 @@ const PcHeaderContainer = styled.div`
 `;
 
 export const PcHeader = () => {
-  const [fixMode, setFixMode] = useState('top');
+  const [fixMode, setFixMode] = useState("top");
   const [isCategoryModalOpened, setIsCategoryModalOpened] = useState();
   const [currentCategory, setCurrentCategory] = useState();
 
@@ -46,9 +46,9 @@ export const PcHeader = () => {
 
   useEffect(() => {
     if (isCategoryModalOpened) {
-      document.querySelector('body').classList.add('modal-is-opened');
+      document.querySelector("body").classList.add("modal-is-opened");
     } else {
-      document.querySelector('body').classList.remove('modal-is-opened');
+      document.querySelector("body").classList.remove("modal-is-opened");
     }
   }, [isCategoryModalOpened]);
 
@@ -67,23 +67,23 @@ export const PcHeader = () => {
 
       if (scrollY === 0) {
         // top
-        setFixMode('top');
+        setFixMode("top");
       } else if (scrollY > lastScrollY) {
         // down
         if ((scrollY > 0) & (scrollY < 70)) {
-          setFixMode('wait');
+          setFixMode("wait");
         } else {
-          setFixMode('down');
+          setFixMode("down");
         }
       } else {
         // up
-        setFixMode('up');
+        setFixMode("up");
       }
       lastScrollY = scrollY > 0 ? scrollY : 0;
       ticking = false;
     };
 
-    const scrollEvent = window.addEventListener('scroll', () => {
+    const scrollEvent = window.addEventListener("scroll", () => {
       if (!ticking) {
         window.requestAnimationFrame(updateScrollDir);
         ticking = true;
@@ -91,7 +91,7 @@ export const PcHeader = () => {
     });
 
     return () => {
-      window.document.removeEventListener('scroll', scrollEvent);
+      window.document.removeEventListener("scroll", scrollEvent);
     };
   }, []);
 

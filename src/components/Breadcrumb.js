@@ -1,7 +1,7 @@
-import { Breadcrumb as AntBreadcrumb } from 'antd';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Breadcrumb as AntBreadcrumb } from "antd";
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const BreadcrumbsWrapper = styled.div`
   width: 100%;
@@ -45,11 +45,11 @@ export const Breadcrumb = ({ links }) => {
       <AntBreadcrumb separator={<ArrowSeparator />}>
         {links.map(
           (link, index) =>
-            link.path !== 'ROOT' && (
+            link.path !== "ROOT" && (
               <AntBreadcrumb.Item key={`breadcrumbs-${index}`}>
                 <Link to={`/section/${link.path}`}>{link.name}</Link>
               </AntBreadcrumb.Item>
-            )
+            ),
         )}
       </AntBreadcrumb>
     </BreadcrumbsWrapper>

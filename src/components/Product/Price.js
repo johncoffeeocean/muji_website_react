@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const PriceWrapper = styled.div`
   margin-top: 10px;
@@ -67,23 +67,23 @@ const NewPriceUnit = styled.span`
   font-weight: 600;
 `;
 export const Price = ({ productPrice }) => {
-  let dateFormated = '';
+  let dateFormated = "";
   const oldPricesLen = productPrice.oldPrices?.length ?? undefined;
 
   if (oldPricesLen) {
     const year = productPrice.oldPrices[oldPricesLen - 1].oldPriceEndDate.slice(
       2,
-      4
+      4,
     );
     const month = productPrice.oldPrices[
       oldPricesLen - 1
     ].oldPriceEndDate.slice(4, 6);
     const day = productPrice.oldPrices[oldPricesLen - 1].oldPriceEndDate.slice(
       6,
-      8
+      8,
     );
 
-    dateFormated = [year, month, day].join('/');
+    dateFormated = [year, month, day].join("/");
   }
 
   return (
@@ -95,9 +95,9 @@ export const Price = ({ productPrice }) => {
             <span>~{dateFormated}</span>
             <br />
             <OldPriceNum>
-              {new Intl.NumberFormat('ja-JP').format(
+              {new Intl.NumberFormat("ja-JP").format(
                 productPrice.oldPrices[productPrice.oldPrices.length - 1]
-                  .oldPrice
+                  .oldPrice,
               )}
             </OldPriceNum>
             <OldPriceUnit>
@@ -110,7 +110,7 @@ export const Price = ({ productPrice }) => {
           <NewPrice>
             <span>消費税込みで</span>
             <NewPriceNum>
-              {new Intl.NumberFormat('ja-JP').format(productPrice.basicPrice)}
+              {new Intl.NumberFormat("ja-JP").format(productPrice.basicPrice)}
             </NewPriceNum>
             <NewPriceUnit>
               <span>円</span>
@@ -123,7 +123,7 @@ export const Price = ({ productPrice }) => {
             <span>消費税込みで</span>
           </PriceText>
           <PriceNum>
-            {new Intl.NumberFormat('ja-JP').format(productPrice.basicPrice)}
+            {new Intl.NumberFormat("ja-JP").format(productPrice.basicPrice)}
           </PriceNum>
           <PriceUnit>
             <span>円</span>
