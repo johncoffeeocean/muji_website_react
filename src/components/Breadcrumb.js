@@ -22,7 +22,7 @@ const BreadcrumbsWrapper = styled.div`
   }
 `;
 
-const BreadcrumbSeparator = () => (
+const ArrowSeparator = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width='7'
@@ -42,7 +42,7 @@ const BreadcrumbSeparator = () => (
 export const Breadcrumb = ({ links }) => {
   return (
     <BreadcrumbsWrapper>
-      <AntBreadcrumb separator={<BreadcrumbSeparator />}>
+      <AntBreadcrumb separator={<ArrowSeparator />}>
         {links.map(
           (link, index) =>
             link.path !== 'ROOT' && (

@@ -5,3 +5,4 @@ export { topBanner } from './topBanner';
 export { itemCategory } from './itemCategory';
 export { cartData } from './cart';
 export { product, review, favorite } from './product';
+export { tshirtSection } from './section';
