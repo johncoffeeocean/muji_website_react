@@ -33,6 +33,7 @@ const InfoWrapper = styled.div`
     display: none !important;
   }
   .ant-tabs-nav .ant-tabs-tab {
+    display: inline-block;
     justify-content: center;
     margin: 0;
     width: 50%;
@@ -50,6 +51,9 @@ const InfoWrapper = styled.div`
     color: rgb(0, 0, 0);
     border-bottom: 3px solid rgb(60, 60, 67);
   }
+  .ant-tabs-nav .ant-tabs-nav-operations {
+    display: none !important;
+}
 `;
 
 const DescriptionWrapper = styled.div`
@@ -141,12 +145,12 @@ const SeeMoreBtn = styled.div`
     align-items: center;
   }
   .seeMore span::after {
-    content: '';
+    content: "";
     display: inline-block;
     width: 14px;
     height: 14px;
     margin-left: 15px;
-    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%2010%2010%22%3E%20%3Crect%20width%3D%2210%22%20height%3D%2210%22%20fill%3D%22none%22%2F%3E%20%3Cg%20transform%3D%22translate(-13.712%20-14.428)%22%3E%20%3Cpath%20d%3D%22M17158.711%2C17720.178v-3.252h-3.252a.749.749%2C0%2C0%2C1%2C0-1.5h3.252v-3.252a.749.749%2C0%2C0%2C1%2C1.5%2C0v3.252h3.252a.749.749%2C0%2C1%2C1%2C0%2C1.5h-3.252v3.252a.749.749%2C0%2C1%2C1-1.5%2C0Z%22%20transform%3D%22translate(-17140.75%20-17696.75)%22%20fill%3D%22%233c3c43%22%2F%3E%20%3C%2Fg%3E%3C%2Fsvg%3E');
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%2010%2010%22%3E%20%3Crect%20width%3D%2210%22%20height%3D%2210%22%20fill%3D%22none%22%2F%3E%20%3Cg%20transform%3D%22translate(-13.712%20-14.428)%22%3E%20%3Cpath%20d%3D%22M17158.711%2C17720.178v-3.252h-3.252a.749.749%2C0%2C0%2C1%2C0-1.5h3.252v-3.252a.749.749%2C0%2C0%2C1%2C1.5%2C0v3.252h3.252a.749.749%2C0%2C1%2C1%2C0%2C1.5h-3.252v3.252a.749.749%2C0%2C1%2C1-1.5%2C0Z%22%20transform%3D%22translate(-17140.75%20-17696.75)%22%20fill%3D%22%233c3c43%22%2F%3E%20%3C%2Fg%3E%3C%2Fsvg%3E");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -174,12 +178,12 @@ const CloseSeeMoreBtn = styled.div`
   }
 
   .closeSeeMore span::after {
-    content: '';
+    content: "";
     display: inline-block;
     width: 14px;
     height: 14px;
     margin-left: 15px;
-    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%2010%2010%22%3E%20%3Cpath%20d%3D%22M8%2C.75H0A.75.75%2C0%2C0%2C1-.75%2C0%2C.75.75%2C0%2C0%2C1%2C0-.75H8A.75.75%2C0%2C0%2C1%2C8.75%2C0%2C.75.75%2C0%2C0%2C1%2C8%2C.75Z%22%20transform%3D%22translate(1%205)%22%20fill%3D%22%233c3c43%22%2F%3E%20%3Crect%20width%3D%2210%22%20height%3D%2210%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E');
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%2010%2010%22%3E%20%3Cpath%20d%3D%22M8%2C.75H0A.75.75%2C0%2C0%2C1-.75%2C0%2C.75.75%2C0%2C0%2C1%2C0-.75H8A.75.75%2C0%2C0%2C1%2C8.75%2C0%2C.75.75%2C0%2C0%2C1%2C8%2C.75Z%22%20transform%3D%22translate(1%205)%22%20fill%3D%22%233c3c43%22%2F%3E%20%3Crect%20width%3D%2210%22%20height%3D%2210%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -192,11 +196,19 @@ export const Info = ({ productData }) => {
     setIsSeeMore((currState) => !currState);
   };
 
+  const productRecieve = [];
+  if (productData.shopReceive) {
+    productRecieve.push("店舗受け取り可");
+  }
+  if (productData.otherStoreReceive) {
+    productRecieve.push("コンビニ受け取り可");
+  }
+
   return (
-    <div id='area-info'>
+    <div id="area-info">
       <InfoWrapper>
-        <Tabs>
-          <Tabs.TabPane tab='商品説明' key='tab-1'>
+        <Tabs defaultActiveKey="tab-1">
+          <Tabs.TabPane tab="商品説明" key="tab-1">
             <DescriptionWrapper>
               <Description>
                 <span>{productData.webCatalogDescription}</span>
@@ -204,55 +216,53 @@ export const Info = ({ productData }) => {
               {isSeeMore ? (
                 <>
                   <ExtraInfoWrapper className={isSeeMore && "display"}>
-                    <dl className='productData__list'>
-                      <div className='productData__item productData__receivingMeans'>
-                        <dt className='productData__dttl'>
+                    <dl className="productData__list">
+                      <div className="productData__item productData__receivingMeans">
+                        <dt className="productData__dttl">
                           <span>受取手段</span>
                         </dt>
-                        <div className='productData__receive'>
-                          <dd className='productData__data'>
-                            店舗受け取り可・コンビニ受け取り可
-                          </dd>
+                        <div className="productData__receive">
+                          <dd className="productData__data">{productRecieve.join("・")}</dd>
                         </div>
                       </div>
-                      <div className='productData__item'>
-                        <dt className='productData__dttl'>
-                          <span>支払手段</span>
-                        </dt>
-                        <dd className='productData__data'>d払い可</dd>
-                      </div>
-                      <div className='productData__item'>
-                        <dt className='productData__dttl'>
+                      {productData.docomoPayment && (
+                        <div className="productData__item">
+                          <dt className="productData__dttl">
+                            <span>支払手段</span>
+                          </dt>
+                          <dd className="productData__data">d払い可</dd>
+                        </div>
+                      )}
+                      <div className="productData__item">
+                        <dt className="productData__dttl">
                           <span>配送区分</span>
                         </dt>
-                        <dd className='productData__data'>宅配品</dd>
+                        <dd className="productData__data">宅配品</dd>
                       </div>
-                      <div className='productData__item'>
-                        <dt className='productData__dttl'>
+                      <div className="productData__item">
+                        <dt className="productData__dttl">
                           <span>商品番号</span>
                         </dt>
-                        <dd className='productData__data productData__number'>
-                          15172900
-                        </dd>
+                        <dd className="productData__data productData__number">{productData.storeJanCode}</dd>
                       </div>
                     </dl>
                   </ExtraInfoWrapper>
                   <CloseSeeMoreBtn onClick={seeMoreButtonHandler}>
-                    <div className='closeSeeMore'>
+                    <div className="closeSeeMore">
                       <span>閉じる</span>
                     </div>
                   </CloseSeeMoreBtn>
                 </>
               ) : (
                 <SeeMoreBtn onClick={seeMoreButtonHandler}>
-                  <div className='seeMore'>
+                  <div className="seeMore">
                     <span>閉じるもっと見る</span>
                   </div>
                 </SeeMoreBtn>
               )}
             </DescriptionWrapper>
           </Tabs.TabPane>
-          <Tabs.TabPane tab='仕様・サイズ' key='tab-2'>
+          <Tabs.TabPane tab="仕様・サイズ" key="tab-2">
             <SizeChart chartData={productData.sizeChart} />
             <Specification specs={productData.intensiveJanSpecs} />
           </Tabs.TabPane>
