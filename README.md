@@ -1,5 +1,5 @@
 # MUJI Japan Netstore Clone
-
+https://muji.com
 ![MUJI Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/MUJI_logo.svg/300px-MUJI_logo.svg.png)
 
 Muji (無印良品, Mujirushi Ryōhin) is a Japanese retail company which sells a wide variety of household and consumer goods.
@@ -12,11 +12,3 @@ Because of its design gives me a basic but also luxury experience, I decided to 
 
 - ReactJS (JavaScript Library)
 - Ant Design (React UI Library)
-
-## Project Installation
-
-Clone this Repository to your computer with Git CLI or GitHub Desktop
-
-```bash
-git clone https://github.com/mitchell-vu/muji-react.git
-```
