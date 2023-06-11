@@ -20,16 +20,3 @@ Clone this Repository to your computer with Git CLI or GitHub Desktop
 ```bash
 git clone https://github.com/mitchell-vu/muji-react.git
 ```
-
-Go to the Project source folder and **Install all independecy packages**
-
-```bash
-npm i
-```
-:warning: **Note:**
-The Node version I used at the time was 16.14.2
-
-Run the project on your localhost on `port 3000`
-```
-npm start
-```
